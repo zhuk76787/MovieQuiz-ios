@@ -46,17 +46,17 @@ final class QuestionFactory: QuestionFactoryProtocol {
                 print("Failed to load image")
             }
             let rating = Float(movie.rating) ?? 0
-                       
-                       let randomRating = Float.randomMovieRating
-                       var text = String()
-                       var correctAnswer = Bool()
-                       if Bool.random(){
-                           text = "Рейтинг этого фильма больше чем \(randomRating)?"
-                           correctAnswer = rating > randomRating
-                       } else{
-                           text = "Рейтинг этого фильма меньше чем \(randomRating)?"
-                           correctAnswer = rating < randomRating
-                       }
+            
+            let randomRating = Float.randomMovieRating
+            var text = String()
+            var correctAnswer = Bool()
+            if Bool.random(){
+                text = "Рейтинг этого фильма больше чем \(randomRating)?"
+                correctAnswer = rating > randomRating
+            } else{
+                text = "Рейтинг этого фильма меньше чем \(randomRating)?"
+                correctAnswer = rating < randomRating
+            }
             
             let question = QuizQuestion(image: imageData,
                                         text: text,
@@ -67,54 +67,54 @@ final class QuestionFactory: QuestionFactoryProtocol {
             }
         }
         /*
-        let questions = questions[safe: index]
-        delegate?.didReceiveNextQuestion(question: questions)
+         let questions = questions[safe: index]
+         delegate?.didReceiveNextQuestion(question: questions)
          */
     }
 }
 
 
 /*
-private let questions: [QuizQuestion] = [
-    QuizQuestion(
-        image: "Deadpool",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: true),
-    QuizQuestion(
-        image: "Kill Bill",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: true),
-    QuizQuestion(
-        image: "The Dark Knight",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: true),
-    QuizQuestion(
-        image: "The Avengers",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: true),
-    QuizQuestion(
-        image: "The Godfather",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: true),
-    QuizQuestion(
-        image: "The Green Knight",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: true),
-    QuizQuestion(
-        image: "Old",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: false),
-    QuizQuestion(
-        image: "The Ice Age Adventures of Buck Wild",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: false),
-    QuizQuestion(
-        image: "Tesla",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: false),
-    QuizQuestion(
-        image: "Vivarium",
-        text: "Рейтинг этого фильма больше чем 6?",
-        correctAnswer: false)
-]
-*/
+ private let questions: [QuizQuestion] = [
+ QuizQuestion(
+ image: "Deadpool",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: true),
+ QuizQuestion(
+ image: "Kill Bill",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: true),
+ QuizQuestion(
+ image: "The Dark Knight",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: true),
+ QuizQuestion(
+ image: "The Avengers",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: true),
+ QuizQuestion(
+ image: "The Godfather",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: true),
+ QuizQuestion(
+ image: "The Green Knight",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: true),
+ QuizQuestion(
+ image: "Old",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: false),
+ QuizQuestion(
+ image: "The Ice Age Adventures of Buck Wild",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: false),
+ QuizQuestion(
+ image: "Tesla",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: false),
+ QuizQuestion(
+ image: "Vivarium",
+ text: "Рейтинг этого фильма больше чем 6?",
+ correctAnswer: false)
+ ]
+ */

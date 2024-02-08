@@ -13,7 +13,7 @@ struct MoviesLoader: MoviesLoadingProtocol{
     private let networkClient = NetworkClient()
     
     // MARK: - URL
-   private var mostPopularMoviesUrl: URL{
+    private var mostPopularMoviesUrl: URL{
         
         guard let url = URL(string: "https://tv-api.com/en/API/Top250Movies/k_zcuw1ytf") else {
             preconditionFailure("Unable to construct mostPopularMoviesUrl")
