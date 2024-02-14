@@ -138,7 +138,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
         showAnswerResult(isCorrect: currentQuestion.correctAnswer == false)
     }
     
-    // MARK: - Show Loading Indicator
     
     private func showLoadingIndicator() {
         activityIndicator.isHidden = false

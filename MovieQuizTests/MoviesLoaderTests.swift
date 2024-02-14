@@ -42,10 +42,10 @@ final class MoviesLoaderTests: XCTestCase {
             // Then
             switch reault {
             case .failure(let error):
-              XCTAssertNotNil(error)
+                XCTAssertNotNil(error)
                 expectation.fulfill()
             case .success(_):
-             XCTFail("Unexpected failure")
+                XCTFail("Unexpected failure")
             }
         }
         waitForExpectations(timeout: 1)
