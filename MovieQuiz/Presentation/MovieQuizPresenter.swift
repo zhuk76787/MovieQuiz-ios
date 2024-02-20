@@ -11,7 +11,7 @@ import UIKit
 final class MovieQuizPresenter: QuestionFactoryDelegate{
     
     private var questionFactory: QuestionFactoryProtocol?
-    private weak var viewController: MovieQuizViewController?
+    private weak var viewController: MovieQuizViewControllerProtocol?
     private var statisticService: StatisticServiceProtocol = StatisticServiceImplementation()
     
     let questionsAmount:Int = 10
@@ -22,7 +22,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate{
     
     
     
-    init(viewController: MovieQuizViewController) {
+    init(viewController: MovieQuizViewControllerProtocol) {
         self.viewController = viewController
         questionFactory = QuestionFactory(moviesLoader: MoviesLoader(), delegate: self)
         questionFactory?.loadData()

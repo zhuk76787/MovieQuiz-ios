@@ -1,7 +1,7 @@
 import UIKit
 
-final class MovieQuizViewController: UIViewController, AlertPresenterDelegate {
-    
+final class MovieQuizViewController: UIViewController, AlertPresenterDelegate,MovieQuizViewControllerProtocol {
+   
     private var alertPresenter: AlertPresenterProtocol?
     private var presenter:MovieQuizPresenter!
     
