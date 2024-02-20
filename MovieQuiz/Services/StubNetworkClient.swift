@@ -24,7 +24,7 @@ struct StubNetworkClient:NetworkRoutingProtocol {
     }
     
     private var expectedResponce: Data {
-        """
+                """
                 {
                    "errorMessage" : "",
                    "items" : [

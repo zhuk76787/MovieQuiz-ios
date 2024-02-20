@@ -29,7 +29,7 @@ struct NetworkClient: NetworkRoutingProtocol {
                 handler(.failure(NetworkError.codeError))
                 return
             }
-           
+            
             guard let data = data else {return}
             handler(.success(data))
         }

@@ -45,9 +45,9 @@ final class MovieQuizUITests: XCTestCase {
         
         let indexLable = app.staticTexts["Index"]
         
-    
+        
         app.buttons["Yes"].tap()
-       
+        
         sleep(3)
         
         let secondPoster = app.images["Poster"]
@@ -66,9 +66,9 @@ final class MovieQuizUITests: XCTestCase {
         
         let indexLable = app.staticTexts["Index"]
         
-    
+        
         app.buttons["No"].tap()
-       
+        
         sleep(3)
         
         let secondPoster = app.images["Poster"]

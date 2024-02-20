@@ -25,38 +25,38 @@ final class StatisticServiceImplementation: StatisticServiceProtocol {
     }
     
     var gamesCount: Int {
-            get {
-                return userDefaults.integer(forKey: Keys.gamesCount.rawValue)
-            }
-            set {
-                userDefaults.set(newValue, forKey: Keys.gamesCount.rawValue)
-            }
+        get {
+            return userDefaults.integer(forKey: Keys.gamesCount.rawValue)
         }
+        set {
+            userDefaults.set(newValue, forKey: Keys.gamesCount.rawValue)
+        }
+    }
     
     var bestGame: GameRecord {
-           get {
-               guard let data = userDefaults.data(forKey: Keys.bestGame.rawValue),
-                     let record = try? JSONDecoder().decode(GameRecord.self, from: data) else {
-                   return .init(correct: 0, total: 0, date: Date())
-               }
-               return record
-           }
-           set {
-               guard let data = try? JSONEncoder().encode(newValue) else {
-                   return
-               }
-               userDefaults.set(data, forKey: Keys.bestGame.rawValue)
-           }
-       }
+        get {
+            guard let data = userDefaults.data(forKey: Keys.bestGame.rawValue),
+                  let record = try? JSONDecoder().decode(GameRecord.self, from: data) else {
+                return .init(correct: 0, total: 0, date: Date())
+            }
+            return record
+        }
+        set {
+            guard let data = try? JSONEncoder().encode(newValue) else {
+                return
+            }
+            userDefaults.set(data, forKey: Keys.bestGame.rawValue)
+        }
+    }
     
     func store(correct count: Int, total amount: Int) {
-            let newRecord = GameRecord(correct: count, total: amount, date: Date())
-            if newRecord.isBetterThan(bestGame) {
-                bestGame = newRecord
-            }
-            gamesCount += 1
-            let totalCorrectAnswers = bestGame.correct + count
-            let totalQuestions = bestGame.total + amount
-            totalAccuracy = Double(totalCorrectAnswers) / Double(totalQuestions)
+        let newRecord = GameRecord(correct: count, total: amount, date: Date())
+        if newRecord.isBetterThan(bestGame) {
+            bestGame = newRecord
         }
+        gamesCount += 1
+        let totalCorrectAnswers = bestGame.correct + count
+        let totalQuestions = bestGame.total + amount
+        totalAccuracy = Double(totalCorrectAnswers) / Double(totalQuestions)
+    }
 }
