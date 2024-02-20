@@ -12,37 +12,21 @@ import XCTest
 final class MovieQuizViewControllerMock: MovieQuizViewControllerProtocol {
    
     
-    func show(quiz step: QuizStepViewModel) {
-        
-    }
+    func show(quiz step: QuizStepViewModel) {}
     
-    func show(quiz result: QuizResultsViewModel) {
-        
-    }
+    func show(quiz result: QuizResultsViewModel) {}
     
-    func highlightImageBorder(isCorrectAnswer: Bool) {
-        
-    }
+    func highlightImageBorder(isCorrectAnswer: Bool) {}
     
-    func showLoadingIndicator() {
-        
-    }
+    func showLoadingIndicator() {}
     
-    func hidenLoadingIndicator() {
-        
-    }
+    func hidenLoadingIndicator() {}
     
-    func buttonEnable() {
-        
-    }
+    func buttonEnable() {}
     
-    func buttonUnenable() {
-        
-    }
+    func buttonUnenable() {}
     
-    func showNetworkError(message: String) {
-        
-    }
+    func showNetworkError(message: String) {}
 }
 
 final class MovieQuizPresenterTests: XCTestCase {
