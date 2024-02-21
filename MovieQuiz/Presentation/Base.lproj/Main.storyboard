@@ -32,13 +32,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="23.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBb-Do-1ow" userLabel="Qestion Title Lable">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="23.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="333.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="textColor" name="YP White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZr-00-f9r" userLabel="Index Lable">
-                                                <rect key="frame" x="338" y="0.0" width="36" height="23.5"/>
+                                                <rect key="frame" x="333.5" y="0.0" width="40.5" height="23.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Index"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="textColor" name="YP White"/>
                                                 <nil key="highlightedColor"/>
@@ -47,6 +48,7 @@
                                     </stackView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ysJ-g2-OB0" userLabel="Preview Image ">
                                         <rect key="frame" x="0.0" y="37.5" width="374" height="561"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Poster"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ysJ-g2-OB0" secondAttribute="height" multiplier="2:3" id="UUK-G0-jPL"/>
                                         </constraints>
@@ -63,6 +65,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PD7-6D-ZbY" userLabel="No Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
                                                 <color key="backgroundColor" name="YP White"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="No"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="DX8-cJ-gOI"/>
                                                 </constraints>
@@ -83,6 +86,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udp-qd-2C0" userLabel="Yes Button">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="60"/>
                                                 <color key="backgroundColor" name="YP White"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Yes"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Да">
@@ -104,10 +108,14 @@
                                     <constraint firstItem="632-8f-ru1" firstAttribute="centerX" secondItem="0qf-tU-nIK" secondAttribute="centerX" id="LQ0-My-t9M"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Cyg-Bc-zkh">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
+                            <constraint firstItem="Cyg-Bc-zkh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4y3-2y-cbW"/>
                             <constraint firstItem="0qf-tU-nIK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="6pN-M3-xAB"/>
                             <constraint firstItem="0qf-tU-nIK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="9lV-aa-vI5"/>
                             <constraint firstItem="0qf-tU-nIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CIx-lu-7li"/>
@@ -115,9 +123,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0qf-tU-nIK" secondAttribute="bottom" id="Nte-uf-SsJ"/>
                             <constraint firstItem="0sD-vA-bej" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RDA-d0-lyD"/>
                             <constraint firstItem="Bgv-Zx-8fd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yf0-ax-lVq"/>
+                            <constraint firstItem="Cyg-Bc-zkh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="psh-en-KB8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Cyg-Bc-zkh" id="FzD-yo-AL2"/>
                         <outlet property="counterLabel" destination="EZr-00-f9r" id="bs7-PN-08e"/>
                         <outlet property="imageView" destination="ysJ-g2-OB0" id="Mcu-om-EuL"/>
                         <outlet property="noButton" destination="PD7-6D-ZbY" id="hdn-hf-ceU"/>
